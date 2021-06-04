@@ -11,7 +11,7 @@ module.exports = {
             {name: ':island: Images Commands', value :'`avatar` `gif + (anything)`'},
             {name: ':joy: Fun Commands', value :'`rickroll` `hungry` `compliment` `quote`'},
             
-            )
+            ) 
         
         .setTimestamp()
         .setFooter('Use them wisely and don\'t abuse!')

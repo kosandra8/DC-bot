@@ -4,4 +4,4 @@ module.exports = {
     execute(message, args){
         message.channel.send('Me is better than the ZiiX bot xoxo');
     }
-}
+} 
