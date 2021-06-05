@@ -4,7 +4,7 @@ const fetch = require('node-fetch');
 
 const client = new Discord.Client();
 
-const prefix = '<3 ';
+const prefix = '<3';
 
 const fs = require('fs');
 
@@ -19,7 +19,7 @@ for(const file of commandFiles){
 
 client.once('ready', () => {
     console.log('jessie <3 is online!')
-     client.user.setActivity('<3 help', {type: "WATCHING"}).catch(console.error)
+     client.user.setActivity('<3help', {type: "WATCHING"}).catch(console.error)
 
 });
 const foodsrep = [
@@ -123,8 +123,6 @@ async function gotMessage(message) {
         let tokens = message.content.split(' ');
     if (message.content === '<3') {
         message.reply('Hey I think you dropped this :crown:')
-    
-
     } else if (message.content === '<3hungry') {
         const index = Math.floor(Math.random() * foodsrep.length);
         message.reply('Here have a ' + foodsrep[index] + ". Bon appetite!");
@@ -161,7 +159,7 @@ client.on('message', message => {
     const command = args.shift().toLowerCase();
 
     if(command === 'help'){
-        client.commands.get('command').execute(message, args, Discord);
+        client.commands.get('commandlist').execute(message, args, Discord);
     }else if (command === 'avatar') {
         client.commands.get('avatar').execute(message, args, Discord);
     }else if (command === 'ping') {
@@ -176,8 +174,6 @@ client.on('message', message => {
         client.commands.get('lol').execute(message, args);
     } else if (command === 'mwah'){
         client.commands.get('kiss').execute(message, args);
-    } else if (command === 'fax'){
-        client.commands.get('ziix').execute(message, args);
     } 
     
     

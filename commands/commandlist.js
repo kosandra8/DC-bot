@@ -1,5 +1,5 @@
 module.exports = {
-    name: 'command',
+    name: 'commandlist',
     description: "Help Embed",
     execute(message, args, Discord) {
         const newEmbed = new Discord.MessageEmbed()
@@ -7,7 +7,7 @@ module.exports = {
         .setTitle('jessie<3 Command List')
         .setDescription('Here are some really cool authentic commands, use `<3 {command}`')           
         .addFields(
-            {name: ':bookmark_tabs: Text Commands', value :'`<3` `ping` `mwah` `lol` `69` `fax`'},
+            {name: ':bookmark_tabs: Text Commands', value :'`<3` `ping` `mwah` `lol` `69` '},
             {name: ':island: Images Commands', value :'`avatar` `gif + (anything)`'},
             {name: ':joy: Fun Commands', value :'`rickroll` `hungry` `compliment` `quote`'},
             
