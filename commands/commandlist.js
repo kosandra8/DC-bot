@@ -10,6 +10,7 @@ module.exports = {
             {name: ':bookmark_tabs: Text Commands', value :'`<3` `ping` `mwah` `lol` `69` '},
             {name: ':island: Images Commands', value :'`avatar` `gif + (anything)`'},
             {name: ':joy: Fun Commands', value :'`bully` `compliment` `hug` `hungry` `kick` `kill` `kiss` `quote` `rickroll` `slap`'},
+            {name: ':notepad_spiral: Math Commands', value :'`calculate "+" "-" "*" "/" "pi"`'},
             
             ) 
         

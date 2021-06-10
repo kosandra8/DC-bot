@@ -27,8 +27,9 @@ client.on('message', message => {
 
     const args = message.content.slice(prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
-
-    if(command === 'help'){
+    if (command === 'calculate'){
+    client.commands.get('calculate').run(client, message, args);
+    } else if(command === 'help'){
         client.commands.get('commandlist').execute(message, args, Discord);
     } else if (message.content === '<3') {
             message.reply('Hey I think you dropped this :crown:')
