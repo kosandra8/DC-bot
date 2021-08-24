@@ -11,7 +11,7 @@ module.exports = {
 
     let resp;
 
-    try {
+    try { 
         resp = math.evaluate(args.join(" "))
     } catch (e) {
         return message.channel.send('Please provide a **valid** question')
