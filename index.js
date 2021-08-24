@@ -60,7 +60,7 @@ client.on('message', message => {
     } else if (command === '69'){
         client.commands.get('noice').execute(message, args);
     }else if (command === 'ping') {
-        client.commands.get('ping').execute(message, args);
+        client.commands.get('ping').execute(client, message, args);
     } else if (command === 'quote'){
         client.commands.get('quote').execute(message, args);
     } else if (command === 'rickroll'){
