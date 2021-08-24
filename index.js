@@ -61,11 +61,6 @@ client.on('message', message => {
         client.commands.get('love').execute(message, args);
     } else if (command === '69'){
         client.commands.get('noice').execute(message, args);
-<<<<<<< HEAD
-=======
-    }else if (command === 'ping') {
-        client.commands.get('ping').execute(client, message, args);
->>>>>>> cba773d4a9c250dc9604c4ac15e14f39b0bb4f6d
     } else if (command === 'quote'){
         client.commands.get('quote').execute(message, args);
     } else if (command === 'rickroll'){
