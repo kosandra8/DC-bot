@@ -5,7 +5,11 @@ module.exports = {
         description: "This is the bully gif command",
         async execute(message, args, Discord) {
             if (!message.mentions.users.first())
-            return message.reply('**:warning: | Wrong Arguments! Please tag someone!.**');
+            message.reply('**:warning: | Wrong Arguments! Please tag someone!.**')
+            .then(msg => {
+                msg.delete({ timeout: 800});
+            })
+            .catch();
         
         let keywords = 'anime bully';
         let url = `https://g.tenor.com/v1/search?q=${keywords}&key=${process.env.TENORKEY}&contentfilter=low`;
