@@ -5,7 +5,7 @@ module.exports = {
         description: "This is the kick gif command",
         async execute(message, args, Discord) {
             if (!message.mentions.users.first())
-            message.reply('**:warning: | Wrong Arguments! Please tag someone!.**')
+            return message.reply('**:warning: | Wrong Arguments! Please tag someone!.**')
             .then(msg => {
                 msg.delete({ timeout: 800});
             })
