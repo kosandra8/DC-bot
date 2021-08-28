@@ -4,26 +4,43 @@ const Discord = require('discord.js');
 module.exports = {
     name:"calculate",
     description: "Get an answer to a math problem",
-
-
+    
     async run(client, message, args){
-    if(!args[0]) return message.channel.send('Please provide a question.');
 
     let resp;
 
     try { 
         resp = math.evaluate(args.join(" "))
     } catch (e) {
-        return message.channel.send('Please provide a **valid** question')
+        return message.reply('Please provide a **valid** math question.')
+        .then(msg => {
+            msg.delete({ timeout: 1000});
+            
+        })
     }
 
-    const embed = new Discord.MessageEmbed()
+    if(!args[0]) 
+    return message.reply('Please provide a **valid** math question.')
+            .then(msg => {
+                msg.delete({ timeout: 1000});
+                
+    })
+    
+    let embed = new Discord.MessageEmbed()
+        .setTitle("Calculating...")
+        .setColor(0x808080) 
+    message.channel.send(embed).then((resultMessage)  => {
+
+    let resultEmbed = new Discord.MessageEmbed()
     .setColor(0x808080)
     .setTitle('Calculator')
     .addField('Question', `\`\`\`css\n${args.join(' ')}\`\`\``)
     .addField('Answer', `\`\`\`css\n${resp}\`\`\``)
 
-    message.channel.send(embed);    
+    resultMessage.edit(resultEmbed);
+
+  
+    })
 
     }
 }
