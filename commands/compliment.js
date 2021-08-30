@@ -28,7 +28,11 @@ const compliments = [
         description: "This is the compliment command",
         execute(message, args){
             const index = Math.floor(Math.random() * compliments.length);
-            message.reply(compliments[index]);
+            let user = message.mentions.users.first() || message.author
+
+
+            message.channel.send(`${user}` + `,` + compliments[index]);
+           
         
         }
     } 

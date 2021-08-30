@@ -7,7 +7,7 @@ module.exports = {
             if (!message.mentions.users.first())
             return message.reply('**:warning: | Wrong Arguments! Please tag someone!.**')
             .then(msg => {
-                msg.delete({ timeout: 800});
+                msg.delete({ timeout: 1000});
             })
             .catch();
             
@@ -21,10 +21,10 @@ module.exports = {
               
                 
         const embed = new Discord.MessageEmbed()
-        .setColor('#0ff1ce')
+        .setColor('#800020')
         .setDescription(`**Aww how cute, ${message.author.username} gave ${message.mentions.users.first().username} a hug!**`,)    
         .setImage(json.results[index].media[0].gif.url)
-        .setFooter(`Requested By: ${message.author.username}`, message.author.displayAvatarURL({dynamic:true}))
+        
 
     
         

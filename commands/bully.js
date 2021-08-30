@@ -7,7 +7,7 @@ module.exports = {
             if (!message.mentions.users.first())
             return message.reply('**:warning: | Wrong Arguments! Please tag someone!.**')
             .then(msg => {
-                msg.delete({ timeout: 800});
+                msg.delete({ timeout: 1000});
             })
             .catch();
         
@@ -23,8 +23,7 @@ module.exports = {
         .setColor('#800020')
         .setDescription(`**Damn!!! ${message.author.username} destroys ${message.mentions.users.first().username}**`,)    
         .setImage(json.results[index].media[0].gif.url)
-        .setFooter(`Requested By: ${message.author.username}`, message.author.displayAvatarURL({dynamic:true}))
-
+       
     
         
 
