@@ -31,7 +31,7 @@ const compliments = [
             let user = message.mentions.users.first() || message.author
 
 
-            message.channel.send(`${user}` + `,` + compliments[index]);
+            message.channel.send(`${user}` + `,` + ` `+ compliments[index]);
            
         
         }
