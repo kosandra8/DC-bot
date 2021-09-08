@@ -1,2 +1,2 @@
-# DC-bot
-This is where I code and create the bots I use for my discord servers.
+
+Oracle is a multipurpose bot with lots of interactive chat and image commands!
