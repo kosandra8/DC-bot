@@ -42,6 +42,8 @@ client.on('message', message => {
     client.commands.get('lol').execute(message, args);    
     } else if (command === '69'){
     client.commands.get('noice').execute(message, args);
+    } else if (command === 'purge'){
+    client.commands.get('purge').execute(message, args, Discord);
 
 //Image Commands
     } else if (command === 'gif'){
@@ -50,7 +52,7 @@ client.on('message', message => {
     client.commands.get('avatar').execute(message, args, Discord);
     }  else if (command === 'rickroll'){
     client.commands.get('rickroll').execute(message, args);
-
+    
 //Fun Commands
     } else if (command === 'blush'){
         client.commands.get('blush').execute(message, args, Discord);
@@ -68,6 +70,8 @@ client.on('message', message => {
         client.commands.get('hug').execute(message, args, Discord);
     } else if (command === 'hungry'){
         client.commands.get('hungry').execute(message, args);
+    } else if (command === 'insult'){
+        client.commands.get('insult').execute(message, args);
     } else if (command === 'kick'){
         client.commands.get('kick').execute(message, args, Discord);
     } else if (command === 'kill'){

@@ -7,11 +7,11 @@ const compliments = [
         'you\'re gorgeous—and that\'s the least interesting thing about you, too :sparkling_heart:',
         'you\'re all that and a super-size bag of chips :frieds:.',
         'even though I\'m a bot, I\'d still love to be friends with you :point_right::point_left:',
-        'there’s a beautiful softness behind your eyes. :pleading_face:',
+        'there\'s a beautiful softness behind your eyes. :pleading_face:',
         'I always learn so many interesting and thought-provoking things from you :face_with_monocle:.',
         'how are you so damn intimidating? :weary:',
         'your eyes are so damn breathtaking :heart_eyes:',
-        'I\’ve missed you man. :right_facing_fist::left_facing_fist:',
+        'I\'ve missed you man. :right_facing_fist::left_facing_fist:',
         'I like you. :blush:',
         'wow, now I have a huge crush on you.:blush:',
         'what a cutie you are.:sparkles:',
@@ -19,7 +19,7 @@ const compliments = [
         'you look good.:thumbsup:',
         'I could talk to you all night :night_with_stars:.',
         'you are awesome :blush:.',
-        'you’re my hero :superhero: .',
+        'you\.re my hero :superhero: .',
         'what a legend... :clap::clap::clap:',
         
     ]
@@ -30,8 +30,9 @@ const compliments = [
             const index = Math.floor(Math.random() * compliments.length);
             let user = message.mentions.users.first() || message.author
 
-
+            
             message.channel.send(`${user}` + `,` + ` `+ compliments[index]);
+            
            
         
         }
